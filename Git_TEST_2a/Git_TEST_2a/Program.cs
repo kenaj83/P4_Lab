@@ -2,4 +2,10 @@
 Console.WriteLine("Hello, World!");
 
 
+<<<<<<< Updated upstream
 //testowy komentarz
+=======
+// to jest testowy komentarz
+
+// drugi komentarz
+>>>>>>> Stashed changes
