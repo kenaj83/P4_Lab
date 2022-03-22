@@ -1,17 +1,32 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System.Data;
 using System.Data.SqlClient;
 
 
-var cstring =
-    @"Data Source=(localdb)\MSSQLLocalDB; Initial Catalog = Northwind; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
-using var connectionString = new SqlConnection(cstring);
+var connectionString = @"Data Source=(localdb)\MSSQLLocalDB; Initial Catalog = Northwind; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
+using var connection = new SqlConnection(connectionString);
 
 
-    connectionString.Open();
+string zapytanieString = "SELECT * FROM Region";
+connection.Open();
+using var cmd = new SqlCommand(zapytanieString, connection);
+using var reader = cmd.ExecuteReader();
 
-using var Regiony = new SqlCommand("SELECT * FROM Region",connectionString);
+while (reader.Read())
+{
+    Console.WriteLine("ID:{0}, Value:{1}",reader[0],reader[1]);
 
-var reader = Regiony.ExecuteReader();
+}
+reader.Close();
 
-    while(reader.Read())
 
+
+var command = new SqlCommand();
+command.CommandType = CommandType.Text;
+command.Connection = connection;
+command.CommandText = " INSERT INTO Region Values(@RegionID,@RegionDescription)";
+command.Parameters.AddWithValue("@RegionID", 6);
+command.Parameters.AddWithValue("@RegionDescription", "Slask");
+var sqlexit = command.ExecuteNonQuery();
+
+
+connection.Close();
