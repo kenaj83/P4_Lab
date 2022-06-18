@@ -1,0 +1,28 @@
+﻿<Window x:Class="Projekt2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekt2"
+        mc:Ignorable="d"
+        Title="Pracownicy" Height="450" Width="800">
+    <Grid>
+        <DataGrid   x:Name="gridPracowniczy" HorizontalAlignment="Left" Margin="10,0,0,261" Width="334" SelectionChanged="gridPracowniczy_SelectionChanged"/>
+        <Label Content="Imię i Nazwisko:" HorizontalAlignment="Left" Margin="362,21,0,0" VerticalAlignment="Top" Width="277"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="498,21,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="126" Height="26"/>
+        <Label Content="Dział:" HorizontalAlignment="Left" Margin="362,61,0,0" VerticalAlignment="Top" Width="262"/>
+        <Label Content="Wynagrodzenie:" HorizontalAlignment="Left" Margin="362,105,0,0" VerticalAlignment="Top" Width="262"/>
+        <TextBox x:Name="txtDzial" HorizontalAlignment="Left" Margin="498,61,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="127" Height="26"/>
+        <TextBox x:Name="txtWynagrodzenie" HorizontalAlignment="Left" Margin="500,105,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="128" Height="26"/>
+        <Button x:Name="Dodaj" Content="Dodaj" HorizontalAlignment="Left" Margin="544,136,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.757,0.303" Click="Dodaj_Click"/>
+        <Button x:Name="Wczytaj" Content="Lista Pracowników" HorizontalAlignment="Left" Margin="10,188,0,0" VerticalAlignment="Top" Width="118" Click="Wczytaj_Click"/>
+        <Button x:Name="Aktualizuj" Content="Aktualizuj" HorizontalAlignment="Left" Margin="446,343,0,0" VerticalAlignment="Top" Width="118" Click="Aktualizuj_Click"/>
+        <Label Content="Imię i Nazwisko:" HorizontalAlignment="Left" Margin="362,201,0,0" VerticalAlignment="Top" Width="278"/>
+        <TextBox x:Name="txtName_2" HorizontalAlignment="Left" Margin="498,201,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="126" Height="26"/>
+        <Label Content="Dział:" HorizontalAlignment="Left" Margin="362,241,0,0" VerticalAlignment="Top" Width="262"/>
+        <Label Content="Wynagrodzenie:" HorizontalAlignment="Left" Margin="362,285,0,0" VerticalAlignment="Top" Width="262"/>
+        <TextBox x:Name="txtDzial_2" HorizontalAlignment="Left" Margin="498,241,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="128" Height="26"/>
+        <TextBox x:Name="txtWynagrodzenie_2" HorizontalAlignment="Left" Margin="500,285,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="128" Height="26"/>
+        <Button x:Name="Usun_Pracownika" Content="Usuń Pracownika" HorizontalAlignment="Left" Margin="226,193,0,0" VerticalAlignment="Top" Width="118" Click="Usun_Click"/>
+    </Grid>
+</Window>
