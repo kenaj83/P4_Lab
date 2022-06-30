@@ -13,37 +13,24 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp1
+namespace WpfApp2
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow(string @default)
+        public MainWindow()
         {
-                InitializeComponent();
-            Text1.Text = @default;
+            InitializeComponent();
         }
-        public string Setting { get; set; }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var window = new Window1("Testowy napis");
+            var window = new Window1("To jest text z okna 2");
             window.ShowDialog();
-            Text1.Text = Setting;
 
-
-            
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-
+            Text1.Text = window.Setting;
         }
     }
 }
