@@ -56,6 +56,7 @@ namespace Projekt2
 
             db.Pracownicies.Add(pracownik);
             db.SaveChanges();
+            Wczytaj_Click(sender, e);
 
         }
 
@@ -106,6 +107,8 @@ namespace Projekt2
 
             db.SaveChanges();
 
+            Wczytaj_Click( sender,  e);
+
         }
 
         private void Usun_Click(object sender, RoutedEventArgs e)
@@ -128,8 +131,10 @@ namespace Projekt2
                 {
                     db.Pracownicies.Remove(prac);
                     db.SaveChanges();
+                    Wczytaj_Click(sender, e);
                 }
             }
+
         }
     }
 }

@@ -6,24 +6,14 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="Okno logowania" Height="450" Width="270">
-    <!-- <Window.Resources> -->
-    <!--     <Style x:Name="PowiekszCzcionke" TargetType="Button"> -->
-    <!--         <Setter Property="FontSize" Value="24"/> -->
-    <!-- -->
-    <!--     </Style> -->
-    <!-- </Window.Resources> -->
+   
+
     <Grid>
-        <Button x:Name="Powieksz" Content="Powiększ" HorizontalAlignment="Left" Margin="23,381,0,0" VerticalAlignment="Top" Height="43" Width="112" Click="Powieksz_Click"/>
+        <Button x:Name="Powieksz"  Content="Powiększ" HorizontalAlignment="Left" Margin="23,363,0,0" VerticalAlignment="Top" Height="43" Width="112" Click="Powieksz_Click"/>
         <Button x:Name="Kliknij" Content="Login" HorizontalAlignment="Center" Margin="0,304,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.072,0.24" Height="35" Width="98" Click="Kliknij_Click"/>
-        <TextBox x:Name="Text" HorizontalAlignment="Center" Margin="0,232,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="141" Height="38" TextChanged="Text_TextChanged"/>
-        <TextBlock HorizontalAlignment="Left" Margin="109,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="43"><Run Language="pl-pl" Text="LOGIN"/></TextBlock>
-        <!-- <Window.Resources> -->
-        <!-- -->
-        <!--     <Style x:Name="PowiekszCzcionke" TargetType="Button"> -->
-        <!--         <Setter Property="FontSize" Value="24"/> -->
-        <!-- -->
-        <!--     </Style> -->
-        <!-- </Window.Resources> -->
+        <TextBox x:Name="Text"  HorizontalAlignment="Center" Margin="0,232,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="141" Height="38" TextChanged="Text_TextChanged"/>
+        <TextBlock x:Name="LoginName" HorizontalAlignment="Center" Margin="0,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" Height="42" RenderTransformOrigin="0.252,0.493"><Run Language="pl-pl" Text="LOGIN"/></TextBlock>
+
 
     </Grid>
 </Window>

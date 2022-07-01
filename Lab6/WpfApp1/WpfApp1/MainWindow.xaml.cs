@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -29,14 +31,19 @@ namespace WpfApp1
         
         private void Powieksz_Click(object sender, RoutedEventArgs e)
         {
+            
+                
 
+                Kliknij.FontSize = 24;
+                LoginName.FontSize = 24;
+            
         }
 
         private void Kliknij_Click(object sender, RoutedEventArgs e)
         {
             if (Text.Text == _login)
             {
-                MessageBoxResult messageBoxResult = MessageBox.Show("Login Poprawny");
+                MessageBoxResult messageBoxResult = MessageBox.Show("Login Prawidłowy");
             }
             else
             {
