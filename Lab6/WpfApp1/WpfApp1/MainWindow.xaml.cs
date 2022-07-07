@@ -31,12 +31,14 @@ namespace WpfApp1
         
         private void Powieksz_Click(object sender, RoutedEventArgs e)
         {
-            
-                
+            var path = Environment.CurrentDirectory + @"\Dictionary1.xaml";
+            using var stream = new FileStream(path, FileMode.Open);
+            var content = XamlReader.Load(stream);
+            this.Resources.MergedDictionaries.Add((ResourceDictionary)content);
 
-                Kliknij.FontSize = 24;
-                LoginName.FontSize = 24;
-            
+            //Kliknij.FontSize = 24;
+            //LoginName.FontSize = 24;
+
         }
 
         private void Kliknij_Click(object sender, RoutedEventArgs e)

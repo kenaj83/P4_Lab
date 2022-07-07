@@ -6,8 +6,13 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="Button" >
+            <Setter Property="FontSize" Value="24"/>
+        </Style>
+    </Window.Resources>
     <Grid>
-        <Button x:Name="Przycisk2" Content="Button" HorizontalAlignment="Left" Margin="400,217,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.936,0.614" Height="33" Width="67" Click="Przycisk2_Click"/>
+        <Button x:Name="Przycisk2" Content="Button" HorizontalAlignment="Left" Margin="388,217,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.936,0.614" Height="48" Width="87" Click="Przycisk2_Click"/>
         <TextBox x:Name="Text3" HorizontalAlignment="Left" Margin="362,150,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="140" Height="53" RenderTransformOrigin="0.5,0.5">
             <TextBox.RenderTransform>
                 <TransformGroup>
