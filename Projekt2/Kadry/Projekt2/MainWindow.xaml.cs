@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Projekt2
+
+
 {
     /// <summary>
     /// Logika interakcji dla klasy MainWindow.xaml
@@ -110,7 +112,7 @@ namespace Projekt2
             Wczytaj_Click( sender,  e);
 
         }
-
+        // ***************************************************** Walidacja usunięcia pracownika *************************************
         private void Usun_Click(object sender, RoutedEventArgs e)
         {
             PracownicyEntities db = new PracownicyEntities();
