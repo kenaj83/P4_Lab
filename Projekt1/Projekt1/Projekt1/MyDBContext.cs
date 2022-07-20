@@ -24,21 +24,21 @@ namespace Projekt1
             optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Inwentaryzacja;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Dostawca>()
-                .Property(x => x.NazwaFirmy)
-                .HasColumnType("varchar(50)");
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<Dostawca>()
+        //        .Property(x => x.NazwaFirmy)
+        //        .HasColumnType("varchar(50)");
 
-            modelBuilder.Entity<Sprzet>()
-                .Property(x => x.NazwaSprzetu)
-                .HasColumnType("varchar(50)");
+        //    modelBuilder.Entity<Sprzet>()
+        //        .Property(x => x.NazwaSprzetu)
+        //        .HasColumnType("varchar(50)");
 
-           // modelBuilder.Entity<Sprzet>(sp =>
-           //{
-           //    sp.Property(x => x.DataPrzekazania).HasDefaultValueSql("getutcdate()");
-           //});
-        }
+        //   // modelBuilder.Entity<Sprzet>(sp =>
+        //   //{
+        //   //    sp.Property(x => x.DataPrzekazania).HasDefaultValueSql("getutcdate()");
+        //   //});
+        //}
 
     }
 }
