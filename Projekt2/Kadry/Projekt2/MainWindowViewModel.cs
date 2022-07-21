@@ -11,36 +11,41 @@ using System.Text.RegularExpressions;
 
 namespace Projekt2
 {
-    // internal class MainWindowViewModel : IDataErrorInfo
-    // {
-    //     public string this[string columnName]
-    //
-    //     {
-    //
-    //         get
-    //         {
-    //             Error = string.Empty;
-    //             switch (columnName)
-    //             {
-    //                 case nameof(txtName.Text):
-    //                     if (string.IsNullOrWhiteSpace(ImieNazwisko))
-    //                     {
-    //                         Error += "Pole nie może być puste";
-    //                         return "Pole nie moze być puste";
-    //                     }
-    //                     break;
-    //                 default:
-    //                     break;
-    //             }
-    //
-    //             return null;
-    //         }
-    //
-    //     }
-    //
-    //
-    //     public string Error { get; private set; }
-    // }
+    internal class MainWindowViewModel : IDataErrorInfo
+    {
+        private int age;
+
+        public int Age
+        {
+            get { return age; }
+            set { age = value; }
+        }
+
+        public string Error
+        {
+            get
+            {
+                return null;
+            }
+        }
+        
+        public string this[string name]
+        {
+            get
+            {
+                string result = null;
+
+                if (name == "Age")
+                {
+                    if (this.age < 18 || this.age > 65)
+                    {
+                        result = "Pracownik nie pełnoletni lub emeryt";
+                    }
+                }
+                return result;
+            }
+        }
+    }
 
 
 

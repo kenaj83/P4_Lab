@@ -1,8 +1,0 @@
-Witam
-
-Przepraszam, że nie było mnie na konsultacjach ale miałem dużą awareie w pracy i w sumie byłem do czartku wyłączony.
-
-Mam nadzieje że projekt który udało mi sie zorbic wystarczy, bo nie ukrywam że to mój ostatni wolny weekend :)
-
-To prosta aplikacja Kadrowa, która ma jedną tabele i trzy przyciski. Dodaj, Usuń i aktualizuj. Przyciski Lista pracowników służy do wyświetlania aktualnej listy.
-Przycisk dodaj dodaje użytkownika (Trzeba kliknąc w przycisk Lista pracownikó by odswieżyć aktualną liste), tak samo dział Usuń pracownika oraz aktualizuj

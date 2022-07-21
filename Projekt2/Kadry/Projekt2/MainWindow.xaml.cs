@@ -58,29 +58,6 @@ namespace Projekt2
 
         }
 
-//******************************************** WALIDACJA pustych pól ******************************************
-        //public bool isValid()
-        //{
-        //    if (txtName.Text == String.Empty)
-        //    {
-        //        MessageBox.Show("Pole nie może być puste", "Niepowodzenie", MessageBoxButton.OK, MessageBoxImage.Error);
-        //        return false;
-        //    }
-
-        //    if (txtDzial.Text == String.Empty)
-        //    {
-        //        MessageBox.Show("Pole nie może być puste", "Niepowodzenie", MessageBoxButton.OK, MessageBoxImage.Error);
-        //        return false;
-        //    }
-
-        //    if (txtWynagrodzenie.Text == String.Empty)
-        //    {
-        //        MessageBox.Show("Pole nie może być puste", "Niepowodzenie", MessageBoxButton.OK, MessageBoxImage.Error);
-        //        return false;
-        //    }
-
-        //    return true;
-        //}
 
 // ****************************************** Wyczyść Pola z komórek text *************************************
         public void wyczyscDane()
@@ -91,6 +68,7 @@ namespace Projekt2
             txtName_2.Clear();
             txtDzial_2.Clear();
             txtWynagrodzenie_2.Clear();
+            textBoxInError.Clear();
 
         }
 
@@ -105,7 +83,7 @@ namespace Projekt2
 
 
             PracownicyEntities db = new PracownicyEntities();
-
+// ********************** Walidacja pustych pól ************************************************************
             if (txtName.Text == string.Empty)
             {
                 MessageBox.Show("Pole nie Imię i Nazwisko nie może być puste", "Niepowodzenie", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -121,6 +99,10 @@ namespace Projekt2
             {
                 MessageBox.Show("Pole nie Wynagrodzenie nie może być puste", "Niepowodzenie", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+            else if (textBoxInError.Text == String.Empty)
+            {
+                MessageBox.Show("Pole Wiek w latach nie moze być puste", "Niepowodzenie", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
             else 
             {
                 Pracownicy pracownik = new Pracownicy()
@@ -133,6 +115,7 @@ namespace Projekt2
 
 
                 };
+                
                 db.Pracownicies.Add(pracownik);
                 db.SaveChanges();
                 Wczytaj_Click(sender, e);
@@ -179,8 +162,7 @@ namespace Projekt2
         private void Aktualizuj_Click(object sender, RoutedEventArgs e)
         {
             PracownicyEntities db = new PracownicyEntities();
-
-            
+        // *************************************Walidacja pustych pól ************************************************************
             if (txtName_2.Text == string.Empty)
             {
                 MessageBox.Show("Pole nie Imię i Nazwisko nie może być puste", "Niepowodzenie", MessageBoxButton.OK, MessageBoxImage.Error);
