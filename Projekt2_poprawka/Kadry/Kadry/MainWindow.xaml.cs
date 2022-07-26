@@ -280,7 +280,7 @@ namespace Kadry
         private void OknoListPrac_Click(object sender, RoutedEventArgs e)
         {
             Window1 oknoWindow1 = new Window1();
-            oknoWindow1.Show();
+            oknoWindow1.ShowDialog();
         }
     }
 }
