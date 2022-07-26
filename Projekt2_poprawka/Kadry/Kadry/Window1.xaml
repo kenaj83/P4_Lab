@@ -1,0 +1,15 @@
+﻿<Window x:Class="Kadry.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kadry"
+        mc:Ignorable="d"
+        Title="Lista Pracowników" Height="250" Width="437">
+    <Grid Margin="0,0,0,148">
+
+        <DataGrid x:Name="ListPrac" HorizontalAlignment="Center" Margin="10,23,0,-128" Width="407" SelectionChanged="GridListPrac_SelectionChanged"/>
+
+
+    </Grid>
+</Window>
